@@ -5,7 +5,7 @@ const https = require("https")
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 
 mailchimp.setConfig({
-  apiKey: "f9973ac29ec96a100f34338fbe912df5-us3",
+  apiKey: env.apiKey,
   server: "YOUR_SERVER_PREFIX",
 });
 
