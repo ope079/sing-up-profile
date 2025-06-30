@@ -6,5 +6,7 @@
   from = "/*"
   status = 200
   to = "/.netlify/functions/api/:splat"
-[[build]]
-  echo "Building Functions"
+[build]
+  command = "npm run build"
+[deploy]
+  command = "node app.js"
