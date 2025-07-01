@@ -3,6 +3,7 @@ const bodyParser = require("body-parser")
 const request = require("request")
 const https = require("https")
 const mailchimp = require("@mailchimp/mailchimp_marketing");
+const serverless = require("serverless-http")
 
 mailchimp.setConfig({
   apiKey: process.env.apiKey,
@@ -66,12 +67,8 @@ app.post("/failure", function(req, res){
     res.redirect("/")
 })
 
-app.listen(process.env.POST || 3000, function(){
-    console.log("Server is running on Port 3000")
-})
+// app.listen(process.env.POST || 3000, function(){
+//     console.log("Server is running on Port 3000")
+// })
 
-//Api Key
-//
-
-//  List Id
-//  
+module.exports.handler = serverless('/', app);
