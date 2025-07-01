@@ -3,9 +3,9 @@
   node_bundler = "esbuild"
 [[redirects]]
   force = true
-  from = "/api/*"
+  from = "/app/*"
   status = 200
-  to = "/.netlify/functions/api/:splat"
+  to = "/.netlify/functions/app/:splat"
 [build]
   functions = "functions"
   publish ="public"
