@@ -1,5 +1,5 @@
 [functions]
-  external_node_modules = ["express", "body-parser", "request", "https", "serverless-http"]
+  external_node_modules = ["express", "body-parser", "request", "https"]
   node_bundler = "esbuild"
 [[redirects]]
   force = true
