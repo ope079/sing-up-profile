@@ -14,6 +14,7 @@ mailchimp.setConfig({
 app = express();
 app.use(express.static("public"))
 app.use(bodyParser.urlencoded({extended:true}))
+const router = express.Router();
 
 app.get("/", function(req, res){
 
