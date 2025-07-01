@@ -71,4 +71,6 @@ app.post("/failure", function(req, res){
 //     console.log("Server is running on Port 3000")
 // })
 
-module.exports.handler = serverless('/', app);
+app.use('/api', router);
+
+module.exports.handler = serverless('/api', app);
